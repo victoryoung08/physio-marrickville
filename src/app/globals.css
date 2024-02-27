@@ -2,32 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+h1 {
+  @apply text-5xl font-bold;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+h2 {
+  @apply text-3xl font-bold;
+}
+h3 {
+  @apply text-2xl font-semibold;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+h4 {
+  @apply text-xl font-semibold;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+p {
+  @apply text-lg;
+}
+
+button {
+  @apply bg-primary text-white px-6 py-2 rounded-xl;
+}
+
+button.is-full {
+  @apply w-full;
+}
+
+.button-wrapper {
+  padding: 4rem 0;
+}
+
+.service-card {
+  @apply h-[300px] w-full text-center bg-accent rounded-xl overflow-hidden;
+}
+
+input {
+  @apply bg-white text-black px-6 py-2 rounded-xl border-[1px] border-black w-full;
 }
